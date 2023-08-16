@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PreEntrega3-Paggi Yago</title>
+    </head>
+    <body>
+    <h1>PreEntrega3-Paggi Yago</h1>
+        <button id="mostrarConductores">Mostrar Cantidad de Conductores</button>
+        <p id="numConductores"></p>
+        <p id="numHogares"></p>
+        
+        
+        <script>
+            // Recupera el valor almacenado en el LocalStorage
+            let storedNumConductores = localStorage.getItem("cant_conduc");
+        
+            // Muestra el valor en el elemento HTML
+            if (storedNumConductores !== null) {
+                document.getElementById("numConductores").textContent = "Cantidad de conductores: " + storedNumConductores;
+            }
+            console.log("Valor almacenado en LocalStorage para conductores:", storedNumConductores);
+
+        </script>
+
+        <script>
+            // Recupera el valor almacenado en el LocalStorage
+            let storedNumHogares = localStorage.getItem("cant_hogar");
+        
+            // Muestra el valor en el elemento HTML
+            if (storedNumHogares !== null) {
+                document.getElementById("numHogares").textContent = "Cantidad de Hogares: " + storedNumHogares;
+            }
+            console.log("Valor almacenado en LocalStorage para hogares:", storedNumHogares);
+
+        </script>
+
+        <script src="index.js"></script>
+    </body>
+    </html>
